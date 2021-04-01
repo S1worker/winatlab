@@ -1,0 +1,45 @@
+.header {
+
+    &__mobile {
+        display: none;
+
+        @include media(md) {
+            display: block;
+        }
+
+        &-nav{
+            @include _flexbox();
+            font-size: 15px;
+            line-height: 16px;
+
+            > li {
+                margin: 0 25px 0 0;
+
+                &.blue {
+
+                    a {
+                        color: $color-blue;
+                    }
+
+                }
+
+                a {
+                    color: $color-body;
+
+                    &:hover {
+                        color: $color-blue;
+                    }
+                }
+
+                &.current-menu-item {
+                    a {
+                        color: $color-blue;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}

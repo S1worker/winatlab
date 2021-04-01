@@ -1,0 +1,75 @@
+.footer {
+
+    &__row {
+        $left-width: 350px;
+        $right-width: 320px;
+        $left-width-lg: 250px;
+        $right-width-lg: 230px;
+        @include _flexbox();
+        @include media(md) {
+            @include _flex-flow(column nowrap);
+        }
+
+        &-left {
+            width: $left-width;
+            @include media(lg) {
+                width: $left-width-lg;
+            }
+            @include media(md) {
+                width: 100%;
+                text-align: center;
+                margin: 0 0 50px 0;
+            }
+
+            p {
+                color: #7DAED3;
+                padding: 0;
+                margin: 0;
+                display: block;
+                font-family: $font-karla;
+                font-size: 15px;
+                line-height: 18px;
+
+                a {
+                    color: #fff;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: $color-blue;
+                    }
+                }
+            }
+
+        }
+
+        &-right {
+            width: $right-width;
+            text-align: right;
+            @include media(lg) {
+                width: $right-width-lg;
+            }
+            @include media(md) {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+        &-center {
+            width: calc(100% - ( #{$right-width + $left-width} ));
+            @include _flexbox();
+            @include _justify-content(space-between);
+            @include media(lg) {
+                width: calc(100% - ( #{$right-width-lg + $left-width-lg} ));
+            }
+            @include media(md) {
+                width: 100%;
+                @include _flex-flow(column nowrap);
+                text-align: center;
+                margin-bottom: 22px;
+            }
+        }
+
+    }
+
+}

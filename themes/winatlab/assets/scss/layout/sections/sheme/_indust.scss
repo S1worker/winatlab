@@ -1,0 +1,21 @@
+.sheme_page {
+
+  &.indust {
+
+    .sheme__slider {
+      margin-bottom: 85px;
+      @include media(md) {
+        margin-bottom: 37px;
+      }
+
+      &-row--left {
+        p {
+          margin: 0;
+        }
+      }
+
+    }
+
+  }
+
+}

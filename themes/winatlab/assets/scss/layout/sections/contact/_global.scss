@@ -1,0 +1,6 @@
+.contact_page {
+    padding: 82px 0 98px 0;
+    @include media(md) {
+        padding: 44px 0 64px 0;
+    }
+}

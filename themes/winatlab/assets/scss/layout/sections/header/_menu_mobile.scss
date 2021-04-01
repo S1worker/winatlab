@@ -1,0 +1,208 @@
+.header {
+
+    &__mobilemenu {
+        display: none;
+        @include _flex-flow(column nowrap);
+        transition: transform .14s linear;
+        will-change: transform;
+        position: fixed;
+        top: 105px;
+        width: 100%;
+        transform: translateX(100%);
+        background-color: #fff;
+        overflow: hidden;
+        padding: 30px 0 0 0;
+        bottom: 0;
+        overflow: auto;
+        @include media(md) {
+            @include _flexbox();
+        }
+
+        &::after {
+            $height: 10px;
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: $height;
+            top: -#{$height};
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.10);
+        }
+
+        .menu__active & {
+            transform: translateX(0%);
+
+        }
+
+        &-list {
+
+            > li {
+
+                > a {
+                    display: block;
+                    padding: 12px 16px;
+                    color: $color-black;
+                    font-size: 24px;
+                    line-height: 28px;
+
+                    &.sub-menu-active {
+
+                        &::after {
+                            transform: translateY(-50%) rotate(135deg) !important;
+                        }
+
+                    }
+
+                }
+
+                &.hide-mobile {
+                    @include media(md) {
+                        display: none;
+                    }
+                }
+
+                &.menu-item-has-children {
+
+                    > a {
+                        padding-right: 60px;
+                        position: relative;
+
+                        &::after {
+                            $size:10px;
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            width: $size;
+                            height: $size;
+                            border: 2px solid $background-blue;
+                            border-right: none;
+                            border-top: none;
+                            right: 16px;
+                            top: 50%;
+                            transform: translateY(-50%) rotate(315deg);
+                            transition: transform .18s linear;
+                            will-change: transform;
+
+                        }
+
+                    }
+
+                }
+
+                .sub-menu {
+                    padding: 6px 38px 12px 38px;
+                    display: none;
+
+                    > li {
+
+                        a {
+                            color: $color-body;
+                            font-size: 15px;
+                            display: block;
+                            padding: 8px 0;
+
+                            &:active, &:focus, &:hover {
+                                color: $color-blue;
+                            }
+
+                        }
+
+                        &.current-menu-item {
+
+                            a {
+                                color: $color-blue;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        &-phone {
+            border-top: 1px solid #C4C4C4;
+            margin: 29px 16px 32px 16px;
+            padding: 30px 0 0 0;
+
+            a {
+                color: #000;
+                font-size: 24px;
+                line-height: 25px;
+                font-weight: normal;
+                @include _flexbox();
+                @include _align-items(center);
+
+                img, svg {
+                    margin: 0 14px 0 0;
+                }
+
+            }
+        }
+
+        &-socials {
+            $background: #EDF7FF;
+            $height: 61px;
+            //@include _flexbox();
+            //@include _justify-content(center);
+            //@include _align-items(center);
+            background-color: $background;
+            height: $height;
+            position: relative;
+            z-index: 1;
+            display: block;
+            text-align: center;
+            margin-top: auto;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background-color: $background;
+                z-index: -1;
+            }
+
+            > li {
+                padding: 0 25px;
+                height: $height;
+                background-color: $background;
+                display: inline-block;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                a {
+                    @include _flexbox();
+                    @include _align-items(center);
+                    height: $height;
+                    background-color: $background;
+                }
+
+            }
+
+            svg {
+                width: 25px;
+                height: 25px;
+
+                path{
+                    fill: #0069B4;
+                }
+            }
+
+        }
+    }
+
+}

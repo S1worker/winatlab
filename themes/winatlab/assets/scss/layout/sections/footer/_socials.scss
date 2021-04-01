@@ -1,0 +1,38 @@
+.footer {
+
+    &__socials {
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+        @include _justify-content(flex-end);
+        padding: 5px 0 0 0;
+        margin: 0 0 25px 0;
+        @include media(md) {
+            @include _justify-content(center);
+        }
+
+        > li {
+            @include _flexbox();
+            @include _align-items(center);
+            padding: 0 17px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child{
+                padding-right: 0;
+            }
+
+            > a {
+
+                &:hover {
+                    opacity: .75;
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,309 @@
+.flexible_icons_vertical {
+
+    &.margin {
+        &__bottom {
+            &-50 {
+                margin-bottom: 50px;
+                @include media(md) {
+                    margin-bottom: 35px;
+                }
+            }
+            &-70 {
+                margin-bottom: 70px;
+                @include media(md) {
+                    margin-bottom: 35px;
+                }
+            }
+            &-100 {
+                margin-bottom: 100px;
+                @include media(md) {
+                    margin-bottom: 90px;
+                }
+            }
+            &-130 {
+                margin-bottom: 130px;
+                @include media(md) {
+                    margin-bottom: 90px;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin: 0 0 45px 0;
+        @include media(md){
+            margin: 15px 0 20px 0;
+        }
+
+    }
+
+    &__list {
+        padding: 0 0 0 11px;
+        @include media(md){
+            padding: 20px 0 0 0;
+        }
+
+        > li {
+            $size-icon: 80px;
+            $size-icon-md: 56px;
+            @include _flexbox();
+
+            &:not(:last-child) {
+                margin: 0 0 40px 0;
+            }
+
+            .icon {
+                width: $size-icon;
+                height: $size-icon;
+                border-radius: 50%;
+                @include _flexbox();
+                @include _align-items(center);
+                @include _justify-content(center);
+                color: #fff;
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 1.4;
+                @include media(md) {
+                    width: $size-icon-md;
+                    height: $size-icon-md;
+                    font-size: 22.4px;
+                }
+                img {
+                    @include media(md) {
+                        max-height: 32px;
+                    }
+                }
+            }
+
+            .text {
+                width: calc(100% - #{$size-icon});
+                padding: 22px 0 0 29px;
+                @include media(md) {
+                    width: calc(100% - #{$size-icon-md});
+                    padding: 16px 0 0 20px;
+                }
+
+                ul {
+
+                    > li {
+                        position: relative;
+                        padding: 0px 0 0 48px;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 1.4;
+                        @media (max-width: 1199px) {
+                            br {
+                                display: none;
+                            }
+                        }
+                        @include media(md) {
+                            font-size: 18px;
+                            line-height: 24px;
+                            padding: 0px 0 0 32px;
+                        }
+
+                        h5 {
+                            @include media(md) {
+                                font-size: 18px;
+                                line-height: 24px;
+                            }
+                        }
+
+                        &::before {
+                            content: '';
+                            border: 12px solid transparent;
+                            border-left: 19px solid green;
+                            position: absolute;
+                            left: 0;
+                            top: 5px;
+                            @include media(md) {
+                                border: 9px solid transparent;
+                                border-left: 15px solid green;
+                                top: 3px;
+                            }
+                        }
+
+                        &:not(:last-child) {
+                            margin: 0 0 20px 0;
+                            @include media(md) {
+                                margin: 0 0 30px 0;
+                            }
+                        }
+
+                        strong {
+                            font-weight: 600;
+                        }
+
+                    }
+
+                }
+
+                h2, h3, h4, h5, h6 {
+                    margin: 0;
+                    font-weight: 500;
+                }
+
+
+            }
+
+            &.blue{
+                .icon {
+                    background-color: #1084DD;
+                }
+                .text {
+
+                    ul {
+                        > li {
+                            &::before {
+                                border-left-color: #1084DD;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.blue_indigo{
+
+                .icon {
+                    background-color: #003E7E;
+                }
+                .text {
+
+                    ul {
+                        > li {
+                            &::before {
+                                border-left-color: #003E7E;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.turquoise{
+                .icon {
+                    background-color: #2D8C7E;
+                }
+                .text {
+
+                    ul {
+                        > li {
+                            &::before {
+                                border-left-color: #2D8C7E;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.grey{
+                .icon {
+                    background-color: #41637D;
+                }
+                .text {
+
+                    ul {
+                        > li {
+                            &::before {
+                                border-left-color: #41637D;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.blue_light{
+                .icon {
+                    background-color: #39A4F5;
+                }
+                .text {
+
+                    ul {
+                        > li {
+                            &::before {
+                                border-left-color: #39A4F5;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.green{
+                .icon {
+                    background-color: #95C11F;
+                }
+                .text   {
+
+                    ul {
+                        > li {
+                            &::before {
+                                border-left-color: #95C11F;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.green_1{
+                .icon {
+                    background-color: #277F37;
+                }
+                .text {
+
+                    ul {
+                        > li {
+                            &::before {
+                                border-left-color: #277F37;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.green_2{
+                .icon {
+                    background-color: #005836;
+                }
+                .text {
+
+                    ul {
+                        > li {
+                            &::before {
+                                border-left-color: #005836;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &.green_3{
+                .icon {
+                    background-color: #95C11F;
+                }
+                .text {
+
+                    ul {
+                        > li {
+                            &::before {
+                                border-left-color: #95C11F;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+
+    }
+
+
+}

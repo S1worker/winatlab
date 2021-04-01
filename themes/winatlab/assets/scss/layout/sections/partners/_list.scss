@@ -1,0 +1,27 @@
+.partners {
+
+    &__list {
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+        margin-bottom: 0;
+        @include media(sm) {
+            @include _justify-content(center);
+        }
+
+        > li {
+            @include _flexbox();
+            width: 33.2789%;
+            padding: 0 15px;
+            margin: 0 0 32px 0;
+            @include media(sm) {
+                width: 49.78%;
+            }
+            @include media(xs) {
+                width: 100%;
+            }
+        }
+
+    }
+
+
+}

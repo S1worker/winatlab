@@ -1,0 +1,89 @@
+.partners {
+
+    &__list {
+
+        &-item {
+            display: block;
+            width: 100%;
+            border: 2px solid #39A4F5;
+            border-radius: 10px;
+            text-align: center;
+            padding: 48px 30px 40px 30px;
+            @include media(md) {
+                padding: 35px 20px 35px 20px;
+            }
+
+            &--title {
+                font-weight: 500;
+                font-size: 24px;
+                color: #000;
+                display: block;
+                margin: 0 0 60px 0;
+                position: relative;
+                color: $color-black;
+                @include media(md) {
+                    font-size: 18px;
+                    margin: 0 0 78px 0;
+                }
+
+                &:active,
+                &:visited {
+                    color: $color-black;
+
+                    &:hover {
+                        color: $color-blue;
+                    }
+
+                }
+
+                &:hover {
+                    color: $color-blue;
+                }
+
+                &::after {
+                    content: '';
+                    border: 20px solid transparent;
+                    border-top: 20px solid #39A4F5;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -60px;
+                    @include media(md) {
+                        border-width: 16px;
+                        bottom: -50px;
+                    }
+                }
+
+            }
+
+            &--logo {
+                @include _flexbox();
+                @include _align-items(center);
+                @include _justify-content(center);
+                height: 120px;
+                @include media(md) {
+                    height: 80px;
+                }
+
+                a {
+                    display: inline-block;
+                    margin: 0 8px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+}

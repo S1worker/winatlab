@@ -1,0 +1,68 @@
+.faq_page {
+    padding: 82px 0 0px 0;
+    @media (min-width: 1000px) and (max-width: 1500px) {
+
+    }
+    @include media(md) {
+        padding: 48px 0 0px 0;
+    }
+
+    .production {
+        background-color: #fff;
+        padding: 85px 0 50px 0;
+        margin: 0;
+        @media (min-width: 1000px) and (max-width: 1500px) {
+            padding-bottom: 85px;
+        }
+        @include media(md) {
+            padding: 65px 0 70px 0;
+        }
+        @include media(xs) {
+            padding-bottom: 40px;
+        }
+
+        &__headpanel {
+            margin: 0 0 42px 0;
+            @include media(md) {
+                margin: 0 0 37px 0;
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            @include media(xs) {
+                margin-top: -45px;
+            }
+        }
+
+    }
+}
+
+.faq {
+    &__title {
+        font-size: 70px;
+        line-height: 83px;
+        text-align: center;
+        margin-bottom: 0;
+        @include media(md) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    &.margin {
+        &__bottom {
+            &-50 {
+                margin-bottom: 50px;
+            }
+            &-70 {
+                margin-bottom: 70px;
+            }
+            &-100 {
+                margin-bottom: 100px;
+            }
+            &-120 {
+                margin-bottom: 120px;
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.flexible_team {
+
+    &.margin {
+        &__bottom {
+            &-50 {
+                margin-bottom: 50px;
+                @include media(md) {
+                    margin-bottom: 35px;
+                }
+            }
+            &-70 {
+                margin-bottom: 70px;
+                @include media(md) {
+                    margin-bottom: 35px;
+                }
+            }
+            &-100 {
+                margin-bottom: 100px;
+                @include media(md) {
+                    margin-bottom: 90px;
+                }
+            }
+            &-130 {
+                margin-bottom: 130px;
+                @include media(md) {
+                    margin-bottom: 90px;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin: 0 0 110px 0;
+        text-align: center;
+        @include media(md) {
+            margin: 0 0 32px 0;
+        }
+    }
+
+    &__list {
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+        @include media(md) {
+            margin-bottom: 7px;
+        }
+
+        > li {
+            @include _flexbox();
+            width: 24.78%;
+            padding: 0 15px;
+            margin: 0 0 64px 0;
+            @include media(sm){
+                width: 49.87%;
+                margin: 0 0 32px 0;
+            }
+            @include media(xs){
+                width: 100%;
+            }
+
+        }
+
+        &-item {
+            width: 100%;
+            text-align: center;
+
+            &--image {
+                $size: 120px;
+                width: $size;
+                height: $size;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 0 auto 34px auto;
+                background-color: $background-blue;
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 1.4;
+                color: $color-black;
+                display: block;
+            }
+
+            &--content {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 1.36;
+                padding: 12px 0 0 0;
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+}

@@ -1,0 +1,328 @@
+.sheme {
+    margin: 0 0 120px 0;
+    @include media(md) {
+        margin: 0 0 65px 0;
+    }
+
+    &__headpanel {
+        text-align: center;
+        margin: 0 0 60px 0;
+        @include _flexbox();
+        @include _align-items(center);
+        @include _justify-content(center);
+        @include media(md) {
+            margin: 0 0 35px 0;
+        }
+        @include media(xxs) {
+            @include _flex-flow(column nowrap);
+        }
+
+        &-title {
+            margin: 0;
+        }
+
+        img, svg {
+            margin: 0 0 0 10px;
+            @include media(md) {
+                max-height: 28px;
+                margin: 0 0 0 4px;
+            }
+            @include media(xxs) {
+                margin: 0 auto 0 auto;
+            }
+        }
+    }
+
+    &__slider {
+        $width: 1215px;
+        position: relative;
+        max-width: $width;
+        margin: 0 auto;
+
+
+        &-item {
+            text-align: center;
+            height: 66px;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            @include _flexbox();
+            @include _align-items(center);
+            @include _justify-content(center);
+            @include _flex-flow(column nowrap);
+            position: relative;
+            @include media(md) {
+                border-radius: 999px;
+                background-image: none;
+            }
+
+            small {
+                font-size: 12px;
+                line-height: 14px;
+                display: block;
+                color: $color-blue;
+                @include media(md) {
+
+                }
+            }
+
+            span {
+                display: block;
+                font-weight: 700;
+                font-size: 14px;
+                color: $color-black;
+                @include media(md) {
+
+                }
+            }
+
+            &[data-step="1"] {
+                background-image: url('../images/sheme-background-step-1.svg');
+                z-index: 4;
+                @include media(md) {
+                    background: #E4F3FE;
+                    transform: translateX(0px);
+                }
+            }
+            &[data-step="2"] {
+                background-image: url('../images/sheme-background-step-2.svg');
+                z-index: 3;
+                transform: translateX(-20px);
+                @include media(md) {
+                    background: #D7EDFD;
+                    transform: translateX(0px);
+                }
+            }
+            &[data-step="3"] {
+                background-image: url('../images/sheme-background-step-3.svg');
+                z-index: 2;
+                transform: translateX(-40px);
+                @include media(md) {
+                    background: #39A4F5;
+                    transform: translateX(0px);
+                }
+
+                small, span {
+                    color: #fff;
+                }
+
+            }
+            &[data-step="4"] {
+                background-image: url('../images/sheme-background-step-4.svg');
+                z-index: 1;
+                transform: translateX(-61px);
+                @include media(md) {
+                    background: #1084DD;
+                    transform: translateX(0px);
+                }
+
+                small, span {
+                    color: #fff;
+                }
+
+            }
+
+        }
+
+        .swiper {
+
+            &-container {
+                position: relative;
+                transform: translateX(45px);
+                @include media(md) {
+                    transform: translateX(0px);
+                }
+            }
+
+            &-button{
+
+                &-prev, &-next, &-linkprev, &-linknext {
+                    $size: 41px;
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    margin: 0;
+                    padding: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: none;
+                    position: absolute;
+                    z-index: 20;
+                    @include media(md) {
+                        display: block;
+                    }
+
+                    &:after {
+                        content: '';
+                        border-width: 9px;
+                        font-family: inherit;
+                        font-size: 4px;
+                        display: block;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateY(-50%) translateX(-50%);
+                    }
+
+                }
+
+                &-prev, &-linkprev {
+                    left: 13px;
+
+                    &:after {
+                        border: 20px solid transparent;
+                        border-right: 20px solid #1084DD;
+                        border-width: 9px;
+                        margin-left: -8px;
+                    }
+                }
+
+                &-next, &-linknext {
+                    right: 13px;
+
+                    &:after {
+                        border: 20px solid transparent;
+                        border-left: 20px solid #1084DD;
+                        border-width: 9px;
+                        margin-left: 6px;
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+        }
+
+        &-phase {
+            @include _flexbox();
+            @include _justify-content(space-between);
+            max-width: $width;
+            margin: 0 auto;
+            padding: 54px 0;
+            @include media(md) {
+                padding: 32px 0;
+            }
+            > li {
+                @include media(md) {
+                    width: 100%;
+                    @include _flex-flow(column nowrap);
+                }
+
+                &:not(.active) {
+                    @include media(md) {
+                        display: none;
+                    }
+                }
+
+                img, svg {
+                    position: relative;
+                    @include media(md) {
+                        margin: 0 auto;
+                    }
+                }
+
+            }
+
+        }
+
+        &-legend {
+            @include _flexbox();
+            @include _justify-content(center);
+            @include _align-items(flex-start);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            @include media(md) {
+                font-size: 10px;
+                line-height: 10px;
+            }
+            @media (max-width: 380px) {
+                @include _justify-content(space-between);
+            }
+            &-left{
+                @include _justify-content(flex-start);
+            }
+            &-right{
+                @include _justify-content(flex-end);
+            }
+
+            > li {
+                @include _flexbox();
+                @include _align-items(center);
+                padding: 0 15px;
+                @include media(md) {
+                    padding: 0 17px;
+                }
+                @include media(xxs) {
+                    padding: 0 5px;
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                > div {
+                    @include _flexbox();
+                    @media (max-width: 380px) {
+                        @include _flex-flow(column nowrap);
+                    }
+                }
+
+            }
+
+            i {
+                $size: 26px;
+                width: $size;
+                height: $size;
+                min-width: $size;
+                display: block;
+                margin: 0 16px 0 0;
+                @include media(md) {
+                    $size: 9px;
+                    width: $size;
+                    height: $size;
+                    margin: 0 $size 0 0;
+                    min-width: $size;
+                }
+                @media (max-width: 380px) {
+                    margin: 0 0px 5px 0;
+                }
+
+                &.indigo {
+                    background-color: #1084DD;
+                }
+                &.blue {
+                    background-color: #39A4F5;
+                }
+                &.grey {
+                    background-color: #EDEDED;
+                }
+
+
+            }
+
+        }
+
+    }
+
+    &__footer {
+        text-align: center;
+        padding: 96px 0 0 0;
+
+        @include media(md) {
+            padding: 32px 0 0 0;
+        }
+
+        .btn {
+            width: 218px;
+            height: 60px;
+        }
+
+    }
+
+}

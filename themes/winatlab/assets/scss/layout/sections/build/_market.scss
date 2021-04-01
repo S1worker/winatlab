@@ -1,0 +1,176 @@
+.flexible_market {
+
+    @include media(md) {
+
+    }
+
+    &__title {
+        margin: 0 0 20px 0;
+        @include media(md) {
+            margin: 0 0 28px 0;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 40px;
+        color: $color-black;
+        @include media(md) {
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0 0 15px 0;
+        }
+        p {
+            @include media(md) {
+                margin: 0;
+            }
+        }
+        br {
+            @include media(md) {
+                display: none;
+            }
+        }
+    }
+
+    &__list {
+        max-width: 515px;
+        @include media(md) {
+            max-width:none;
+            margin: 0 0 70px 0;
+        }
+
+        > li {
+            padding: 36px 0 28px 0;
+            @include media(md) {
+                padding: 16px 0 30px 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            &:first-child{
+                padding-top: 0;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #8A898B;
+            }
+
+        }
+
+        &-item {
+            $image-width: 260px;
+            $image-width-xs: 135px;
+            @include _flexbox();
+            width: 100%;
+
+            &--text {
+                width: calc(100% - #{$image-width});
+                text-align: right;
+                padding: 10px 0 0 0;
+                @media (max-width: 1100px) {
+                    width: calc(100% - 220px);
+                }
+                @include media(md) {
+                    text-align: left;
+                }
+                @include media(xs) {
+                    width: calc(100% - #{$image-width-xs});
+                }
+
+                ul {
+                    @include _flexbox();
+                    @include _justify-content(flex-end);
+                    margin: 0 0 17px 0;
+                    white-space: nowrap;
+                    @include media(md) {
+                        @include _justify-content(flex-start);
+                    }
+
+                    > li {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 1.4;
+                        display: inline-block;
+                        @include _flexbox();
+                        @include _align-items(center);
+
+                        &:not(:first-child) {
+
+                            &::before {
+                                content: '';
+                                border: 7px solid transparent;
+                                border-left: 7px solid $background-blue;
+                                display: inline-block;
+                                margin: 0 7px 0 15px;
+                                position: relative;
+                                top: 1px;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                h4 {
+                    font-size: 24px;
+                    line-height: 1.2;
+                    color: $color-body;
+                    margin: 0 0 7px 0;
+                    @include media(md) {
+                        font-size: 22px;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin: 0 0 12px 0;
+                    @include media(md) {
+                        font-size: 18px;
+                    }
+
+                    &:last-child{
+                        margin: 0;
+                    }
+
+                }
+
+                a {
+                    font-weight: normal;
+                    font-size: 16px;
+                    white-space: nowrap;
+                    @include media(md) {
+                        font-size: 14px;
+                    }
+                }
+
+            }
+
+            &--image {
+                width: $image-width;
+                text-align: right;
+                @media (max-width: 1100px) {
+                    width: 220px;
+
+                }
+                @include media(xs) {
+                    width: $image-width-xs;
+                    padding-top: 42px;
+                }
+
+                img {
+                    float: right;
+                }
+
+            }
+
+
+        }
+
+    }
+
+}

@@ -1,0 +1,207 @@
+.news {
+
+    &__single {
+        padding: 85px 0 0px 0;
+        @include media(md) {
+            padding: 50px 0 0px 0;
+        }
+
+        &-title {
+            text-align: center;
+            font-size: 70px;
+            line-height: 1.2;
+            margin: 0 0 4px 0;
+            @include media(md) {
+                font-size: 32px;
+                line-height: 48px;
+                margin: 0 0 32px 0;
+            }
+            span {
+                text-transform: lowercase;
+                position: relative;
+                left: -2px;
+            }
+        }
+
+        &-excerpt {
+            text-align: center;
+            font-weight: normal;
+            font-size: 23px;
+            line-height: 1.5;
+            margin: 0 0 80px 0;
+            font-family: $font-karla;
+            @include media(md) {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 32px;
+                margin: 0 0 38px 0;
+            }
+
+            br {
+                @include media(md) {
+                    display: none;
+                }
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        &-content {
+            padding: 70px 0 0 0;
+        }
+
+        &-video {
+            $height: 560px;
+            max-width: 990px;
+            margin: 0 auto 90px auto;
+            position: relative;
+            z-index: 1;
+            height: $height;
+            @include media(md) {
+                height: 400px;
+                margin: 0 auto 65px auto;
+            }
+            @include media(xs) {
+                height: 300px;
+            }
+
+            .play {
+
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: relative;
+                z-index: 1;
+            }
+
+            iframe {
+                height: $height !important;
+                @include media(md) {
+                    height: 400px !important;
+                }
+                @include media(xs) {
+                    height: 300px !important;
+                }
+            }
+
+        }
+
+        &-text {
+            background-color: #fff;
+            padding: 50px 0 40px 0;
+            @include media(md) {
+                padding: 62px 0 23px 0;
+            }
+
+            > .container-fluid {
+                max-width: 1280px;
+            }
+
+            .text {
+
+                &__style {
+
+                    p {
+                        line-height: 1.4;
+                        font-family: $font-karla;
+                        @include media(md) {
+                            font-family: $font-body;
+                            font-weight: normal;
+                            font-size: 14px !important;
+                            line-height: 20px !important;
+                            margin: 0 0 22px 0;
+
+                        }
+                    }
+
+                    .weight {
+
+                        &-400 {
+                            font-weight: 400;
+                        }
+
+                        &-500 {
+                            font-weight: 500;
+                        }
+
+                    }
+
+                    h2 {
+
+                        &.weight-400 {
+                            margin: 0 0 14px 0;
+                            @include media(md) {
+                                margin: 0 0 26px 0;
+                            }
+                        }
+
+                        @include media(md) {
+                            font-size: 24px !important;
+                            line-height: 32px;
+                        }
+
+                    }
+
+                    h5 {
+                        @include media(md) {
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 24px;
+                            margin: 0 0 38px 0;
+                        }
+                    }
+
+                    h2, h3, h4, h5, h6 {
+                        @include media(md) {
+                            text-align: center;
+                        }
+                    }
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+}
+
+.news-image-row {
+
+    @include media(md) {
+        padding-top: 15px;
+    }
+
+    > div {
+
+        &:nth-child(1){
+            flex-basis: 40% !important;
+            @include media(md) {
+                flex-basis: 100% !important;
+            }
+        }
+
+        &:nth-child(2){
+            flex-basis: 60% !important;
+            @include media(md) {
+                flex-basis: 100% !important;
+            }
+        }
+
+    }
+
+}
+
+.news-image-gallery {
+    @include media(md) {
+        padding-top: 15px;
+    }
+}

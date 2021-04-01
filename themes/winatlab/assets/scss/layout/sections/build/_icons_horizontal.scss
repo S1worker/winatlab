@@ -1,0 +1,163 @@
+.flexible_icons_horizontal {
+
+    &.margin {
+        &__bottom {
+            &-50 {
+                margin-bottom: 50px;
+                @include media(md) {
+                    margin-bottom: 35px;
+                }
+            }
+            &-70 {
+                margin-bottom: 70px;
+                @include media(md) {
+                    margin-bottom: 35px;
+                }
+            }
+            &-100 {
+                margin-bottom: 100px;
+                @include media(md) {
+                    margin-bottom: 90px;
+                }
+            }
+            &-130 {
+                margin-bottom: 130px;
+                @include media(md) {
+                    margin-bottom: 90px;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin: 0 0 47px 0;
+        text-align: center;
+        @include media(md){
+            margin: 0px 0 32px 0;
+            text-align: left;
+        }
+
+    }
+
+    &__list {
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+        @include _justify-content(center);
+        @include media(md){
+        }
+
+        > li {
+            @include _flexbox();
+            @include _flex-direction(column);
+            @include _align-items(flex-start);
+            width: 33.17%;
+            padding: 0 15px;
+            margin: 0 0 30px 0;
+            text-align: center;
+            position: relative;
+            @include media(md){
+                width: 100%;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                border: 11px solid transparent;
+                border-top: 18px solid green;
+                margin-left: -10px;
+                top: 110px;
+                @include media(md) {
+                    border-width: 8px;
+                    border-top-width: 14px;
+                    transform: rotate(-90deg);
+                    top: 16px;
+                    left: 102px;
+
+                }
+
+            }
+
+            .icon {
+                $size-icon: 80px;
+                $size-icon-md: 56px;
+                width: $size-icon;
+                height: $size-icon;
+                border-radius: 50%;
+                margin: 0 auto 75px auto;
+                @include _flexbox();
+                @include _align-items(center);
+                @include _justify-content(center);
+                @include media(md) {
+                    position: absolute;
+                    left: 15px;
+                    top: 0;
+                    width: $size-icon-md;
+                    height: $size-icon-md;
+                }
+
+                img {
+                    @include media(md) {
+                        max-height: 32px;
+                    }
+                }
+            }
+
+            .text {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 1.4;
+                width: 100%;
+                @include media(md) {
+                    padding: 16px 0 0 108px;
+                    text-align: left;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+
+                p {
+                    @include media(md) {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+
+                br {
+                    @include media(lg) {
+                        display: none;
+                    }
+                }
+
+            }
+
+            &.blue{
+                .icon {
+                    background-color: #1084DD;
+                }
+                &::before {
+                    border-top-color: #1084DD;
+                    @include media(md) {
+
+                    }
+                }
+            }
+
+            &.blue_light{
+                .icon {
+                    background-color: #39A4F5;
+                }
+                &::before {
+                    border-top-color: #39A4F5;
+                    @include media(md) {
+
+                    }
+                }
+            }
+
+        }
+
+
+    }
+
+
+}

@@ -1,0 +1,103 @@
+.flexible_platform {
+
+    &.margin {
+        &__bottom {
+            &-50 {
+                margin-bottom: 50px;
+                @include media(md) {
+                    margin-bottom: 35px;
+                }
+            }
+            &-70 {
+                margin-bottom: 70px;
+                @include media(md) {
+                    margin-bottom: 35px;
+                }
+            }
+            &-100 {
+                margin-bottom: 100px;
+                @include media(md) {
+                    margin-bottom: 60px;
+                }
+            }
+            &-120 {
+                margin-bottom: 120px;
+                @include media(md) {
+                    margin-bottom: 90px;
+                }
+            }
+            &-130 {
+                margin-bottom: 130px;
+                @include media(md) {
+                    margin-bottom: 90px;
+                }
+            }
+        }
+    }
+
+    &__list {
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+
+        > li {
+            @include _flexbox();
+            width: 49.87%;
+            padding: 0 15px;
+            margin: 0 0 16px 0;
+            @include media(md) {
+                width: 100%;
+            }
+        }
+
+        &-item {
+            width: 100%;
+            border: 1px solid #8A898B;
+            border-radius: 10px;
+            @include _flexbox();
+            @include _align-items(center);
+            padding: 0 30px 0 160px;
+            min-height: 162px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.4;
+            color: #000000;
+            position: relative;
+            @include media(md) {
+                min-height: auto;
+                @include _align-items(flex-start);
+                padding: 32px 32px 32px 76px;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+
+            &::before {
+                content: '';
+                border: 20px solid transparent;
+                border-left: 28px solid #95C11F;
+                position: absolute;
+                left: 60px;
+                top: 50%;
+                margin-top: -19px;
+                @include media(md) {
+                    border-width: 9px;
+                    border-left-width: 15px;
+                    left: 32px;
+                    top: 33px;
+                    margin: 0;
+                }
+            }
+
+            p {
+                padding: 0;
+                margin: 0;
+            }
+
+            em {
+                font-weight: 400;
+            }
+
+        }
+    }
+
+}

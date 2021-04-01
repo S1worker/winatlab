@@ -1,0 +1,79 @@
+.flexible_number__list {
+
+    &-list {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.4;
+        @include media(md) {
+            font-size: 18px;
+            line-height: 32px;
+            padding-top: 5px;
+            margin: 0 0 50px 0;
+        }
+
+        > li {
+            padding: 0 0 0 110px;
+            position: relative;
+            color: $color-black;
+            @include media(md) {
+                padding: 0;
+                text-align: center;
+            }
+
+            br {
+                @media (max-width: 1260px) {
+                    display: none;
+                }
+                @include media(xs) {
+                    display: none;
+                }
+            }
+
+            &:not(:last-child) {
+                margin: 0 0 48px 0;
+                @include media(md) {
+                    margin: 0 0 40px 0;
+                }
+            }
+
+            &::before {
+                $size: 79px;
+                position: absolute;
+                width: $size;
+                height: $size;
+                border-radius: 50%;
+                background-color: #39A4F5;
+                color: #fff;
+                font-weight: 500;
+                font-size: 39px;
+                text-align: center;
+                line-height: $size;
+                left: 0;
+                top: 0;
+                display: block;
+                @include media(md) {
+                    $size: 56px;
+                    width: $size;
+                    height: $size;
+                    line-height: $size;
+                    font-size: 28px;
+                    position: static;
+                    margin: 0 auto 18px auto;
+                }
+            }
+
+            strong {
+                color: #39A4F5;
+                font-weight: 500;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+
+        }
+
+    }
+
+}

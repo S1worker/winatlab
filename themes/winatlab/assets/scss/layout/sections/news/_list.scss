@@ -1,0 +1,89 @@
+.news {
+
+    &__list {
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+
+        > li {
+            width: 49.89%;
+            padding: 0 15px;
+            margin: 0 0 35px 0;
+            @include media(sm) {
+                width: 100%;
+                margin: 0 0 40px 0;
+            }
+
+            &.first_post{
+                width: 100%;
+                margin: 0 0 55px 0;
+                @include media(md) {
+                    margin: 0 0 40px 0;
+                }
+
+                .news{
+                    &__list{
+
+                        &-item {
+                            &--image {
+                                margin: 0 0 23px 0;
+                                @include media(md) {
+                                    margin: 0 0 20px 0;
+                                }
+                            }
+                            &--title {
+                                font-size: 39px;
+                                line-height: 1.4;
+                                font-weight: 700;
+                                @include media(lg) {
+                                    font-size: 30px;
+
+                                }
+                                @include media(md) {
+                                    font-size: 20px;
+                                    line-height: 1.4;
+                                }
+                            }
+                            &--category {
+                                padding: 8px 0 0;
+                                font-weight: bold;
+                                font-size: 23px;
+                                line-height: 1.5;
+                                color: $color-black;
+                                @include media(lg) {
+                                    font-size: 18px;
+                                }
+                                @include media(md) {
+                                    padding: 11px 0 0;
+                                    font-size: 15px;
+                                    line-height: 1.4;
+                                    color: $color-body;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .news{
+                &__list{
+                    &-item {
+                        &--title {
+
+                        }
+                        &--category {
+                            padding: 5px 0 0;
+
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+
+}

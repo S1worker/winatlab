@@ -1,0 +1,15 @@
+.header {
+
+    &__mobile {
+        border-bottom: 1px solid #F0F3F4;
+
+        &-row {
+            height: 34px;
+            @include _flexbox();
+            @include _align-items(center);
+            @include _justify-content(flex-end);
+        }
+
+    }
+
+}

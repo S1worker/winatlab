@@ -1,0 +1,11 @@
+.footer {
+
+    &__top {
+        background-color: #124D7A;
+        padding: 70px 0 80px 0;
+        @include media(md) {
+            padding: 48px 0 50px 0;
+        }
+    }
+
+}

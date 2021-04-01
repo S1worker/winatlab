@@ -1,0 +1,47 @@
+.header {
+
+    &__lang {
+        width: 130px;
+        @include _flexbox();
+        @include _justify-content(flex-end);
+        font-size: 15px;
+        line-height: 15px;
+        white-space: nowrap;
+        text-transform: uppercase;
+
+        @include media(lg) {
+            width: 90px;
+        }
+
+        > li {
+
+            &.active {
+                color: rgba(20, 19, 22, 0.61);
+
+                > a {
+                    color: $color-black;
+                    opacity: .5;
+                }
+
+            }
+
+            &:not(:last-child) {
+
+                &::after {
+                    content: '/';
+                    display: inline-block;
+                    color: $color-black;
+                    margin: 0 5px 0 1px;
+                }
+
+            }
+
+            > a {
+                display: inline-block;
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,91 @@
+.sheme_page {
+
+  &__form {
+    background-color: #F0F3F4;
+    padding: 70px 0 50px 0;
+    @include media(md) {
+      padding: 40px 0 10px 0;
+    }
+
+
+    &-title {
+      text-align: center;
+
+      span {
+        @include media(md) {
+          display: block;
+        }
+      }
+
+    }
+
+    &-form {
+      max-width: 590px;
+      margin: 0 auto;
+      @include media(md) {
+
+      }
+
+      .rows {
+        $width-button: 218px;
+        @include _flexbox();
+        @include media(md) {
+          @include _flex-direction(column);
+        }
+
+        &__left {
+          width: calc(100% - #{$width-button});
+          padding: 0 31px 0 0;
+          @include media(md) {
+            width: 100%;
+            max-width: 340px;
+            padding: 0 0 24px 0;
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+        }
+
+        &__right {
+          width: $width-button;
+          @include media(md) {
+            width: 100%;
+          }
+        }
+
+      }
+
+      .form{
+        &-control {
+          background-color: #fff;
+          border: 1px solid rgba(20, 19, 22, 0.5);
+          height: 60px;
+        }
+        &-group {
+          margin: 0;
+        }
+      }
+
+      [type="submit"]{
+        width: 100%;
+        height: 60px;
+        @include media(md) {
+          width: 218px;
+          margin: 0 auto;
+          display: block;
+          height: 60px;
+        }
+      }
+
+      .wpcf7{
+        &-response{
+          &-output {
+            padding-top: 25px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}

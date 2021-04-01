@@ -1,0 +1,39 @@
+.partners_page {
+  padding-bottom: 25px;
+  @include media(md) {
+    padding-bottom: 0px;
+  }
+
+  .partners {
+    margin-bottom: 90px;
+    @include media(md) {
+      padding-top: 10px;
+      margin-bottom: 34px;
+
+    }
+  }
+
+
+  .flexible_text {
+
+    &-content {
+      h1 {
+        @include media(md) {
+          margin: 0 0 36px 0;
+        }
+      }
+      p, p * {
+        @include media(md) {
+          font-weight: 500;
+          font-size: 24px !important;
+          line-height: 32px !important;
+          text-align: center !important;
+        }
+      }
+    }
+
+
+
+  }
+
+}

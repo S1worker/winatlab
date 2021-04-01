@@ -1,0 +1,58 @@
+.production {
+    margin: 0 0 100px 0;
+    @include media(md) {
+        margin: 0 0 70px 0;
+    }
+
+    &__headpanel {
+        text-align: center;
+        margin: 0 0 60px 0;
+        @include media(md) {
+            margin: 0 0 35px 0;
+        }
+
+        &-title {
+
+        }
+
+        &-text {
+
+        }
+
+    }
+
+    &__slider {
+        position: relative;
+        @include media(md) {
+            $padd: 25px;
+            padding-left: $padd;
+            padding-right: $padd;
+        }
+
+        .swiper {
+
+            &-controls {
+                @include media(md) {
+                    padding: 0;
+                }
+            }
+
+            &-button {
+
+                &-prev, &-next{
+                    margin-top: -58px;
+                    @include media(md) {
+                        top: 50%;
+                        margin: 0;
+                        transform: translateY(-50%);
+                        margin-top: -22px;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

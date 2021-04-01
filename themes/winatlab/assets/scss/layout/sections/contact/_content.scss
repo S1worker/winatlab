@@ -1,0 +1,61 @@
+.contact_page {
+
+    &__content {
+        max-width: 1080px;
+        margin: 0 auto;
+
+        h1 {
+            line-height: 1.2;
+            margin: 0 0 17px 0;
+            @include media(md){
+                font-size: 32px !important;
+                line-height: 48px !important;
+                margin: 0 0 30px 0;
+            }
+
+            span, strong {
+                color: #39a4f5;
+                @include media(md){
+                    text-transform: lowercase;
+                }
+            }
+
+        }
+
+        p {
+            font-weight: normal;
+            line-height: 1.5;
+            font-family: $font-karla;
+            padding: 0;
+            margin: 0;
+            @include media(md){
+                font-weight: 500;
+                font-size: 24px !important;
+                line-height: 32px !important;
+                font-family: $font-body;
+            }
+
+            br {
+                @include media(md){
+                    display: none;
+                }
+            }
+
+            strong {
+                font-family: $font-body;
+                display: inline-block;
+                padding: 22px 0 0 0;
+                @include media(md) {
+                    font-size: 24px !important;
+                    line-height: 1.4;
+                    padding: 32px 0 0 0;
+                }
+            }
+
+        }
+
+
+    }
+
+
+}

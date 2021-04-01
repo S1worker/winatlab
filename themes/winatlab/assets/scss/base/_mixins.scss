@@ -1,0 +1,42 @@
+/**
+ * Mixins
+ * Placeholder
+ */
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+/**
+ * Mixins
+ * Link
+ */
+@mixin link($color-text, $color-border, $height) {
+    color: $color-text;
+    text-decoration: none;
+    outline: none !important;
+    background-image: -webkit-linear-gradient(bottom,transparent 0,$color-border 0,$color-border $height,transparent $height);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition: background-size .3s, color .3s;
+    transition: background-size .3s, -webkit-background-size .3s, color .3s;
+
+    &:hover {
+        background-size: 0% 100%;
+    }
+
+}

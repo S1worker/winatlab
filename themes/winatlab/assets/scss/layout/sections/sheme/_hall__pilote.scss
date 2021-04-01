@@ -1,0 +1,53 @@
+.sheme_page {
+
+  &.hall_pilote {
+
+    .sheme__slider {
+      margin-bottom: 86px;
+      @include media(md){
+        margin-bottom: 28px;
+      }
+
+      &-row{
+        &--left {
+          max-width: none;
+
+          h2 {
+            margin: 0 0 66px 0;
+            @include media(md) {
+              margin: 0 0 20px 0;
+            }
+          }
+
+          ul{
+            > li {
+              &:not(:last-child) {
+                margin: 0;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    .sheme_page{
+      &__title{
+        span {
+          @include media(md) {
+            display: inline;
+          }
+        }
+      }
+    }
+
+  }
+
+  .hall_pilote__textone {
+    @include media(md) {
+      margin-bottom: 50px;
+    }
+  }
+
+}

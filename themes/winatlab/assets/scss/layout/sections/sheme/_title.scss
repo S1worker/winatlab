@@ -1,0 +1,26 @@
+.sheme_page {
+
+  &__title {
+    text-align: center;
+    font-size: 70px;
+    line-height: 1.2;
+    margin: 0 0 71px 0;
+
+    @include media(lg) {
+      font-size: 50px;
+    }
+    @include media(md) {
+      font-size: 32px;
+      margin: 0 0 40px 0;
+    }
+
+    span {
+      @include media(md) {
+        display: block;
+      }
+    }
+
+  }
+
+
+}

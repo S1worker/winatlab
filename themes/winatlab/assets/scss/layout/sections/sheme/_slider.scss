@@ -1,0 +1,140 @@
+.sheme_page {
+
+  .sheme {
+
+    &__slider {
+      max-width: 1275px;
+      margin-bottom: 65px;
+      @include media(md) {
+        margin-bottom: 35px;
+      }
+
+      &-legend {
+        @include media(md) {
+          font-size: 10px;
+          line-height: 10px;
+        }
+      }
+
+      .swiper{
+
+        &-container {
+          margin-bottom: 75px;
+          max-width: 1215px;
+          @include media(md) {
+            margin-bottom: 35px;
+          }
+        }
+
+      }
+
+      &-row {
+
+        > .row {
+          @include media(md) {
+            @include _flexbox();
+            @include _flex-direction(column);
+          }
+          > [class*=col-] {
+            &:nth-child(1) {
+              @include media(md) {
+                order: 2;
+              }
+            }
+            &:nth-child(2) {
+              @include media(md) {
+                order: 1;
+              }
+            }
+          }
+        }
+
+        img {
+          max-width: 502px;
+          margin-bottom: 50px;
+          @include media(md) {
+            max-width: none;
+            width: 100%;
+            margin-bottom: 30px;
+          }
+        }
+
+        &--right {
+          @include _flexbox();
+          @include _justify-content(flex-end);
+          @include _flex-direction(column);
+          @include _align-items(flex-end);
+          @include media(md) {
+            margin-bottom: 65px;
+          }
+        }
+
+        &--left {
+          max-width: 590px;
+          @include media(md) {
+            max-width: none;
+
+          }
+
+          h2 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 64px;
+            margin: 0 0 29px 0;
+            @include media(md) {
+              font-size: 24px;
+              line-height: 32px;
+              margin: 0 0 25px 0;
+            }
+
+          }
+
+          p, ul {
+            color: #000;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 36px;
+            @include media(md) {
+              font-size: 18px;
+              line-height: 24px;
+            }
+
+          }
+
+          ul {
+
+             > li {
+
+               &::before {
+                 content: '';
+                 display: inline-block;
+                 width: 8px;
+                 height: 2px;
+                 background-color: #000;
+                 margin: 0 5px 0 0;
+                 position: relative;
+                 top: -8px;
+                 @include media(md){
+                   top: -5px;
+                 }
+               }
+
+               &:not(:last-child) {
+                 margin: 0 0 5px 0;
+               }
+
+             }
+
+          }
+
+        }
+
+      }
+
+
+    }
+
+  }
+
+
+}

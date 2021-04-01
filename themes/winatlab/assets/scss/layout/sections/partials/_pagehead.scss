@@ -1,0 +1,28 @@
+.pagehead {
+    margin: 0 0 40px 0;
+
+    &__centered {
+        padding: 120px 0 0 0;
+    }
+
+    &__title {
+        font-size: 70px;
+        line-height: 78px;
+    }
+
+    &__excerpt {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 52px;
+        padding: 0 30px;
+
+        p {
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+    }
+
+
+}

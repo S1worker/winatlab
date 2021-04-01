@@ -1,0 +1,109 @@
+.flexible_list {
+
+    &__list {
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+
+        > li {
+            @include _flexbox();
+            width: 49.887%;
+            padding: 0 15px;
+            margin: 0 0 48px 0;
+            @include media(md) {
+                margin: 0 0 32px 0;
+                width: 100%;
+            }
+
+            &:last-child {
+                @include media(md) {
+                    margin: 0 0 0px 0;
+                }
+            }
+
+        }
+
+        &-item {
+
+            &--title {
+                margin: 0 0 27px 0;
+                position: relative;
+                padding: 0 0 0 40px;
+                @include media(md) {
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin: 0 0 24px 0;
+                    padding: 0;
+                }
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    width: 20px;
+                    height: 6px;
+                    background-color: $background-blue;
+                    border-radius: 5px;
+                    top: 13px;
+                    @include media(md) {
+                        position: static;
+                        margin: 0 auto 16px auto;
+                        width: 11px;
+
+                    }
+                }
+
+            }
+
+            &--text {
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 1.6;
+                @include media(md) {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
+
+            }
+
+        }
+
+        &.margin {
+            &__bottom {
+                &-50 {
+                    margin-bottom: 2px;
+                    @include media(md) {
+                        margin-bottom: 3px;
+                    }
+                }
+                &-70 {
+                    margin-bottom: 22px;
+                    @include media(md) {
+                        margin-bottom: 3px;
+                    }
+                }
+                &-100 {
+                    margin-bottom: 52px;
+                    @include media(md) {
+                        margin-bottom: 58px;
+                    }
+                }
+                &-130 {
+                    margin-bottom: 95px;
+                    @include media(md) {
+                        margin-bottom: 58px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+}

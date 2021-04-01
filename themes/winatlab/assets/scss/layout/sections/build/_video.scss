@@ -1,0 +1,110 @@
+.flexible_video {
+
+    &-content {
+        padding: 10px 0 0 0;
+        @include media(md) {
+            padding: 0;
+            text-align: center;
+            margin: 0 0 26px 0;
+        }
+
+        &--title {
+            text-align: center;
+            margin:0 0 78px 0;
+            @include media(md){
+                margin:0 0 30px 0;
+            }
+
+            span {
+                color: $color-blue-light;
+            }
+
+        }
+
+        &--video {
+            position: relative;
+
+            &.videoPsevdoLink {
+                cursor: pointer;
+
+                &:hover {
+
+                    .play{
+                        transform: translateY(-50%) translateX(-50%) scale(1.12);
+                    }
+
+                }
+            }
+
+            .play {
+                $size: 65px;
+                width: $size;
+                height: $size;
+                border-radius: 50%;
+                background-color: $background-blue;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                z-index: 2;
+                margin: 0;
+                padding: 0;
+                display: block;
+                transition: transform .18s linear;
+                will-change: transform;
+                @include media(md) {
+                    $size: 40px;
+                    width: $size;
+                    height: $size;
+                }
+
+                &::after {
+                    content: '';
+                    border: 10px solid transparent;
+                    border-left: 14px solid #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+                    z-index: 3;
+                    margin-left: 6px;
+                    @include media(md) {
+                        border: 6px solid transparent;
+                        border-left: 8px solid #fff;
+                        margin-left: 4px;
+                    }
+                }
+
+            }
+
+            img {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+
+            }
+        }
+
+        &--footer {
+            padding: 35px 0 0 0;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.2;
+            @include media(md) {
+                padding: 25px 0 0 0;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+    }
+
+}

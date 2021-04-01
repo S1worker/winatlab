@@ -1,0 +1,68 @@
+.header {
+
+    &__mobile {
+
+        &-lang {
+
+            [type="button"] {
+                padding: 0;
+                margin: 0;
+                border: none;
+                background: none;
+                cursor: pointer;
+                text-transform: uppercase;
+                color: rgba(20, 19, 22, 0.61);
+                font-size: 15px;
+                line-height: 15px;
+                @include _flexbox();
+                @include _align-items(center);
+
+                &::after {
+                    content: '';
+                    border: 4px solid transparent;
+                    border-top: 4px solid $background-blue;
+                    display: block;
+                    margin: 5px 0 0 5px;
+                    font-size: inherit;
+                }
+
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 15px;
+                background-color: #fff;
+                text-transform: uppercase;
+                font-size: 15px;
+                line-height: 15px;
+                box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
+                z-index: 10;
+                text-align: right;
+
+                .lang__active & {
+                    display: block;
+                }
+
+                > li {
+
+                    > a {
+                        display: block;
+                        color: $color-body;
+                        padding: 8px 12px;
+
+                        &:hover {
+                            color: $color-blue;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,15 @@
+.faq_page {
+
+    &__accordion {
+        max-width: 1080px;
+        margin: 0 auto 57px auto;
+        padding: 70px 0 0 0;
+        @include media(md) {
+            margin: 0 auto 65px auto;
+            padding: 44px 0 0 0;
+        }
+
+    }
+
+
+}

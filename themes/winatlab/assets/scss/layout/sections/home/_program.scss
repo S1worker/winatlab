@@ -1,0 +1,66 @@
+.program {
+    margin: 0 0 90px 0;
+    @include media(md) {
+        margin: 0 0 50px 0;
+    }
+
+    &__headpanel {
+        text-align: center;
+        margin: 0 0 55px 0;
+        @include media(md) {
+            margin: 0 0 35px 0;
+        }
+
+        &-title {
+
+        }
+
+        &-text {
+
+            p {
+                @include media(md) {
+                    text-align: left;
+                }
+            }
+
+        }
+
+    }
+
+    &__slider {
+        position: relative;
+        @include media(md) {
+            $padd: 25px;
+            padding-right: $padd;
+            padding-left: $padd;
+        }
+
+        .swiper {
+
+            &-controls {
+                @include media(md) {
+                    padding: 0;
+                }
+            }
+
+            &-button {
+
+                &-prev, &-next{
+                    margin-top: -55px;
+
+                    @include media(md) {
+                        top: 50%;
+                        margin: 0;
+                        transform: translateY(-50%);
+                        margin-top: -22px;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

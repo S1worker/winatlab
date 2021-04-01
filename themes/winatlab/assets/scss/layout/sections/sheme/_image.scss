@@ -1,0 +1,70 @@
+.sheme_page {
+
+  &__fleximage {
+
+    &.margin{
+
+      &__bottom {
+        &-40{
+          margin-bottom: 40px;
+        }
+        &-50{
+          margin-bottom: 50px;
+        }
+        &-60{
+          margin-bottom: 60px;
+        }
+        &-70{
+          margin-bottom: 70px;
+          @include media(md) {
+            margin-bottom: 35px;
+          }
+        }
+        &-80{
+          margin-bottom: 80px;
+        }
+        &-100{
+          margin-bottom: 100px;
+        }
+        &-110{
+          margin-bottom: 110px;
+          @include media(md) {
+            margin-bottom: 64px;
+          }
+        }
+        &-120{
+          margin-bottom: 120px;
+        }
+      }
+
+    }
+
+    &-title {
+      text-align: center;
+      margin: 0 0 48px 0;
+      @include media(md) {
+        margin: 0 0 28px 0;
+        text-align: left;
+      }
+    }
+
+    &-image {
+
+      img {
+        margin: 0 auto;
+      }
+
+      &.center {
+        img {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+    }
+
+
+
+  }
+
+}

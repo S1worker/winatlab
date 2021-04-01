@@ -1,0 +1,96 @@
+.contact_page {
+
+    &__form {
+        padding: 80px 0 0 0;
+        @include media(md) {
+            padding: 32px 0 0 0;
+        }
+
+        h5 {
+            font-weight: normal;
+            font-size: 23px;
+            line-height: 1.5;
+            margin: 0 0 16px 0;
+            color: $color-body;
+            padding: 10px 0 0 0;
+            @include media(md) {
+                font-size: 20px;
+                line-height: 24px;
+                padding: 15px 0 0 0;
+                margin: 0 0 20px 0;
+            }
+
+            &.dynamic {
+                display: none;
+            }
+
+        }
+
+        .row {
+            @include _flexbox();
+            @include _flex-wrap(wrap);
+
+            @include media(sm){
+                @include _flex-direction(column);
+            }
+
+            > [class*=col-] {
+                @include _flexbox();
+                @include _flex-direction(column);
+                width: 49.78%;
+                @include media(sm){
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .image {
+            margin: 60px 0 0px 0;
+            height: 100%;
+            width: 100%;
+            background: url('../images/contact-form-image.jpg') center center no-repeat;
+            background-size: cover;
+            max-height: 391px;
+            @include media(sm){
+                display: none;
+            }
+        }
+
+        .form {
+            &-group{
+
+                &-submit {
+                    padding-top: 45px;
+                    @include media(sm) {
+                        text-align: center;
+                        padding-top: 17px;
+                    }
+
+                    [type="submit"]{
+                        width: 218px;
+                        height: 60px;
+                    }
+
+                }
+
+            }
+        }
+
+        .wpcf7-response-output {
+            float: left;
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            @include media(md) {
+
+            }
+        }
+
+
+    }
+
+
+}

@@ -1,0 +1,42 @@
+.program {
+
+    &__list {
+
+        &-item {
+            display: block;
+            text-align: center;
+
+            &:hover {
+                img {
+                    //opacity: .7;
+                }
+            }
+
+            &--image {
+                margin: 0 0 20px 0;
+                @include media(md) {
+
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+            &--title {
+                font-weight: 500;
+                font-size: 20px;
+                color: $color-black;
+                @include media(md) {
+
+                }
+            }
+
+        }
+
+    }
+
+}

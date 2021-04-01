@@ -1,0 +1,250 @@
+.news {
+
+    &__page {
+        padding: 76px 0 0 0;
+        @include media(md) {
+            padding: 55px 0 63px 0;
+        }
+
+        &-sidebar {
+            $width-right: 490px;
+            $width-left: 424px;
+            @include _flexbox();
+            @include media(md) {
+                @include _flex-direction(column);
+            }
+
+            &--left {
+                @include _flexbox();
+                @include _flex-direction(column);
+                width: calc(100% - #{$width-right});
+                @include media(md) {
+                    width: 100%;
+                }
+            }
+
+            &--right {
+                @include _flexbox();
+                @include _flex-direction(column);
+                width: $width-right;
+                padding: 0 0 0 30px;
+                @include media(md) {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+
+            &.reverse {
+                padding-top: 45px;
+                @include media(md) {
+                    padding-top: 64px;
+                }
+
+                .news__page-sidebar--left {
+                    order: 2;
+                    width: calc(100% - #{$width-left});
+                    padding: 0 0 0 30px;
+                    @include media(md) {
+                        width: 100%;
+                        padding: 0;
+                        order: 1;
+                    }
+                }
+
+                .news__page-sidebar--right {
+                    order: 1;
+                    padding: 0;
+                    width: $width-left;
+                    @include media(md) {
+                        width: 100%;
+                        order: 2;
+                    }
+                }
+
+                .news__list {
+                    > li {
+                        &:not(:last-child){
+                            @include media(md) {
+                                margin: 0 0 40px 0;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+        &-attached {
+            padding: 0 0 0 15px;
+            @include media(md) {
+                padding: 0;
+            }
+
+            &--title {
+                font-size: 23px;
+                line-height: 1.4;
+                margin: 0 0 30px 0;
+                @include media(md) {
+                    margin: 0 0 24px 0;
+                }
+            }
+
+            &--list {
+                margin: 0 0 55px 0;
+                @include media(md) {
+                    margin: 0 0 45px 0;
+                }
+
+                > li {
+
+                    &:not(:last-child) {
+                        margin: 0 0 14px 0;
+                    }
+
+
+                }
+
+                &---item {
+                    line-height: 1.4;
+
+                    span {
+                        display: block;
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: $color-black;
+                        margin: 0 0 7px 0;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        color: $color-body;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    em {
+                        text-transform: uppercase;
+                    }
+
+                    &:hover {
+                        span{
+                            color: $color-blue;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        &-subscribe {
+            @include _flexbox();
+            @include _align-items(center);
+            text-align: center;
+            height: 100%;
+            background-color: #F0F3F4;
+            margin: 0 0 110px 0;
+            width: 100%;
+            padding: 33px;
+            @include media(md) {
+                margin: 20px 0 0px 0;
+                padding: 44px 30px 40px 30px;
+            }
+
+            &--content {
+                width: 100%;
+            }
+
+            &--title {
+                font-size: 39px;
+                line-height: 1.4;
+                margin: 0 0 40px 0;
+                @include media(lg) {
+                    font-size: 30px;
+                }
+                @include media(md) {
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin: 0 0 20px 0;
+                }
+
+                span {
+                    display: block;
+                }
+            }
+
+            &--form {
+
+                .form{
+
+                    &-control {
+                        background-color: #FFFFFF;
+                        border: 1px solid rgba(20, 19, 22, 0.3);
+                        border-radius: 3px;
+                        padding: 0 29px;
+                        height: 55px;
+                        width: 100%;
+                        font-family: $font-karla;
+                        font-size: 20px;
+                        @include media(md) {
+                            font-size: 16px;
+                        }
+                    }
+
+                    &-group {
+                        width: 100%;
+                        max-width: 340px;
+                        margin-left: auto;
+                        margin-right: auto;
+
+                        .btn {
+                            width: 218px;
+                            height: 60px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        &-banner {
+            background-color: #fff;
+            text-align: center;
+            width: 100%;
+            font-size: 39px;
+            line-height: 1.2;
+            padding: 30px 0 0 0;
+            @include media(md) {
+                margin-top: 24px;
+            }
+
+            &--title {
+                margin: 0 0 20px 0;
+                @include media(lg) {
+                    font-size: 30px;
+                }
+
+                span {
+                    display: block;
+                }
+
+            }
+
+            .btn {
+                width: 218px;
+                height: 60px;
+            }
+
+
+
+        }
+
+    }
+
+}

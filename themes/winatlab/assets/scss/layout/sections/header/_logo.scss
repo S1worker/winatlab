@@ -1,0 +1,16 @@
+.header {
+
+    &__logo {
+
+        img, svg {
+            @include media(lg){
+                max-width: 210px;
+            }
+            @media (max-width: 380px) {
+                max-width: 175px;
+            }
+        }
+
+    }
+
+}

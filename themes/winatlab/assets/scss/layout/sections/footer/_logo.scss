@@ -1,0 +1,11 @@
+.footer {
+
+    &__logo {
+        margin: 0 0 25px 0;
+        display: inline-block;
+        @include media(md) {
+            margin: 0 0 17px 0;
+        }
+    }
+
+}

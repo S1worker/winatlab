@@ -1,0 +1,44 @@
+.sheme_page {
+
+  &__flexpartners {
+
+    &.margin{
+
+      &__bottom {
+        &-40{
+          margin-bottom: 40px;
+        }
+        &-50{
+          margin-bottom: 50px;
+        }
+        &-60{
+          margin-bottom: 60px;
+          @include media(md){
+            margin-bottom: 30px;
+          }
+        }
+        &-70{
+          margin-bottom: 70px;
+          @include media(md){
+            margin-bottom: 34px;
+          }
+        }
+        &-80{
+          margin-bottom: 80px;
+        }
+        &-100{
+          margin-bottom: 100px;
+        }
+        &-110{
+          margin-bottom: 110px;
+        }
+        &-120{
+          margin-bottom: 120px;
+        }
+      }
+
+    }
+
+  }
+
+}
